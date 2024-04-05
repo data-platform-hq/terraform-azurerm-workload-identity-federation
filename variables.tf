@@ -9,11 +9,13 @@ variable "resource_group" {
 }
 
 variable "ado_workload_identity_federation_enabled" {
+  type        = bool
   description = "Workload Identity Federation enable"
   default     = true
 }
 
 variable "role_assignments_allowed" {
+  type        = bool
   description = "This variable determines whether Service Principal used by Terraform can assign Roles to Azure resources"
   default     = true
 }
