@@ -45,9 +45,12 @@ No modules.
 | <a name="input_key_vault_policy_config"></a> [key\_vault\_policy\_config](#input\_key\_vault\_policy\_config) | List of object with parameters to create Key Vault Access Policy | <pre>list(object({<br>    key_vault_name     = string<br>    key_vault_id       = string<br>    tenant_id          = string<br>    key_permissions    = optional(list(string), ["Get", "List", "Encrypt", "Decrypt"])<br>    secret_permissions = optional(list(string), ["Get", "List"])<br>  }))</pre> | `[]` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure Region | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group | `string` | n/a | yes |
+| <a name="input_role_assignment_default_role_name"></a> [role\_assignment\_default\_role\_name](#input\_role\_assignment\_default\_role\_name) | Role name for Role Assignment | `string` | `"Reader"` | no |
 | <a name="input_role_assignment_scope"></a> [role\_assignment\_scope](#input\_role\_assignment\_scope) | ADO Service Connection target Subscription Id | `string` | n/a | yes |
 | <a name="input_role_assignments_allowed"></a> [role\_assignments\_allowed](#input\_role\_assignments\_allowed) | This variable determines whether Service Principal used by Terraform can assign Roles to Azure resources | `bool` | `true` | no |
+| <a name="input_service_endpoint_description"></a> [service\_endpoint\_description](#input\_service\_endpoint\_description) | Service endpoint description | `string` | `""` | no |
 | <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | ADO Service Connection target Subscription Id | `string` | n/a | yes |
+| <a name="input_subscription_name"></a> [subscription\_name](#input\_subscription\_name) | Short name of subscription used for Service Connection | `string` | `"dev"` | no |
 | <a name="input_tenant_id"></a> [tenant\_id](#input\_tenant\_id) | ADO Service Connection target Tenant Id | `string` | n/a | yes |
 | <a name="input_user_assigned_identity_name"></a> [user\_assigned\_identity\_name](#input\_user\_assigned\_identity\_name) | Specifies the name of the User Assigned Identity | `string` | n/a | yes |
 
@@ -55,7 +58,9 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_azurerm_user_assigned_identity_name"></a> [azurerm\_user\_assigned\_identity\_name](#output\_azurerm\_user\_assigned\_identity\_name) | Built name of single User Assigned Identity |
+| <a name="output_user_assigned_identity_client_id"></a> [user\_assigned\_identity\_client\_id](#output\_user\_assigned\_identity\_client\_id) | Built client id of single User Assigned Identity |
+| <a name="output_user_assigned_identity_id"></a> [user\_assigned\_identity\_id](#output\_user\_assigned\_identity\_id) | Built ID of single User Assigned Identity |
+| <a name="output_user_assigned_identity_name"></a> [user\_assigned\_identity\_name](#output\_user\_assigned\_identity\_name) | Built name of single User Assigned Identity |
 | <a name="output_user_assigned_identity_principal_id"></a> [user\_assigned\_identity\_principal\_id](#output\_user\_assigned\_identity\_principal\_id) | Built principal id of single User Assigned Identity |
 <!-- END_TF_DOCS -->
 
