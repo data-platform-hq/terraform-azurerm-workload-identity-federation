@@ -8,6 +8,24 @@ variable "resource_group" {
   type        = string
 }
 
+variable "service_endpoint_description" {
+  type        = string
+  description = "Service endpoint description"
+  default     = ""
+}
+
+variable "subscription_name" {
+  type        = string
+  description = "Short name of subscription used for Service Connection"
+  default     = "dev"
+}
+
+variable "role_assignment_default_role_name" {
+  type        = string
+  description = "Role name for Role Assignment"
+  default     = "Reader"
+}
+
 variable "ado_workload_identity_federation_enabled" {
   type        = bool
   description = "Workload Identity Federation enable"

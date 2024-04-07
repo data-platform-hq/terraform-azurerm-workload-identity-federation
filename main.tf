@@ -17,14 +17,14 @@ resource "azuredevops_serviceendpoint_azurerm" "this" {
 
   project_id                             = data.azuredevops_project.this.project_id
   service_endpoint_name                  = coalesce(var.custom_serviceendpoint_name, "federated-(${var.subscription_id})-${var.user_assigned_identity_name}")
-  description                            = "Managed by Terraform"
+  description                            = var.service_endpoint_description
   service_endpoint_authentication_scheme = "WorkloadIdentityFederation"
   credentials {
     serviceprincipalid = azurerm_user_assigned_identity.this.client_id
   }
   azurerm_spn_tenantid      = var.tenant_id
   azurerm_subscription_id   = var.subscription_id
-  azurerm_subscription_name = "Example Subscription Name"
+  azurerm_subscription_name = var.subscription_name
 }
 
 resource "azurerm_federated_identity_credential" "this" {
@@ -44,7 +44,7 @@ resource "azurerm_role_assignment" "this" {
 
   principal_id         = azurerm_user_assigned_identity.this.principal_id
   scope                = var.role_assignment_scope
-  role_definition_name = "Reader"
+  role_definition_name = var.role_assignment_default_role_name
 }
 
 resource "azurerm_key_vault_access_policy" "assigned_identity" {
