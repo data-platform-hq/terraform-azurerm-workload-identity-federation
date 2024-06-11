@@ -9,14 +9,14 @@ Terraform module for creation Azure <>
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_azuredevops"></a> [azuredevops](#requirement\_azuredevops) | =0.11.0 |
+| <a name="requirement_azuredevops"></a> [azuredevops](#requirement\_azuredevops) | >=0.11.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.40.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azuredevops"></a> [azuredevops](#provider\_azuredevops) | =0.11.0 |
+| <a name="provider_azuredevops"></a> [azuredevops](#provider\_azuredevops) | >=0.11.0 |
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.40.0 |
 
 ## Modules
@@ -27,12 +27,12 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azuredevops_serviceendpoint_azurerm.this](https://registry.terraform.io/providers/microsoft/azuredevops/0.11.0/docs/resources/serviceendpoint_azurerm) | resource |
+| [azuredevops_serviceendpoint_azurerm.this](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/resources/serviceendpoint_azurerm) | resource |
 | [azurerm_federated_identity_credential.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/federated_identity_credential) | resource |
 | [azurerm_key_vault_access_policy.assigned_identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_access_policy) | resource |
 | [azurerm_role_assignment.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_user_assigned_identity.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
-| [azuredevops_project.this](https://registry.terraform.io/providers/microsoft/azuredevops/0.11.0/docs/data-sources/project) | data source |
+| [azuredevops_project.this](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/data-sources/project) | data source |
 
 ## Inputs
 
