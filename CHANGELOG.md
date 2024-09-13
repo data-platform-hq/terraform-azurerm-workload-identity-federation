@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/data-platform-hq/terraform-azurerm-workload-identity-federation/compare/v1.0.1...v1.1.0) (2024-09-13)
+
+
+### Features
+
+* upgrade to azurerm v4 ([c4f86d8](https://github.com/data-platform-hq/terraform-azurerm-workload-identity-federation/commit/c4f86d8b00281e029944d5788a56f86d1d80d74b))
+
 ## [1.0.1](https://github.com/data-platform-hq/terraform-azurerm-workload-identity-federation/compare/v1.0.0...v1.0.1) (2024-06-11)
 
 
