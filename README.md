@@ -8,16 +8,16 @@ Terraform module for creation Azure <>
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
 | <a name="requirement_azuredevops"></a> [azuredevops](#requirement\_azuredevops) | >=0.11.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 4.0.1 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_azuredevops"></a> [azuredevops](#provider\_azuredevops) | >=0.11.0 |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 4.0.1 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 
 ## Modules
 
@@ -42,7 +42,7 @@ No modules.
 | <a name="input_ado_workload_identity_federation_enabled"></a> [ado\_workload\_identity\_federation\_enabled](#input\_ado\_workload\_identity\_federation\_enabled) | Workload Identity Federation enable | `bool` | `true` | no |
 | <a name="input_custom_federated_identity_credential_name"></a> [custom\_federated\_identity\_credential\_name](#input\_custom\_federated\_identity\_credential\_name) | Specifies the name of the Federated Identity Credential | `string` | `""` | no |
 | <a name="input_custom_serviceendpoint_name"></a> [custom\_serviceendpoint\_name](#input\_custom\_serviceendpoint\_name) | Specifies the name of the ADO Service Connection | `string` | `""` | no |
-| <a name="input_key_vault_policy_config"></a> [key\_vault\_policy\_config](#input\_key\_vault\_policy\_config) | List of object with parameters to create Key Vault Access Policy | <pre>list(object({<br>    key_vault_name     = string<br>    key_vault_id       = string<br>    tenant_id          = string<br>    key_permissions    = optional(list(string), ["Get", "List", "Encrypt", "Decrypt"])<br>    secret_permissions = optional(list(string), ["Get", "List"])<br>  }))</pre> | `[]` | no |
+| <a name="input_key_vault_policy_config"></a> [key\_vault\_policy\_config](#input\_key\_vault\_policy\_config) | List of object with parameters to create Key Vault Access Policy | <pre>list(object({<br/>    key_vault_name     = string<br/>    key_vault_id       = string<br/>    tenant_id          = string<br/>    key_permissions    = optional(list(string), ["Get", "List", "Encrypt", "Decrypt"])<br/>    secret_permissions = optional(list(string), ["Get", "List"])<br/>  }))</pre> | `[]` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure Region | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group | `string` | n/a | yes |
 | <a name="input_role_assignment_default_role_name"></a> [role\_assignment\_default\_role\_name](#input\_role\_assignment\_default\_role\_name) | Role name for Role Assignment | `string` | `"Reader"` | no |
