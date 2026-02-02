@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/data-platform-hq/terraform-azurerm-workload-identity-federation/compare/v1.1.0...v1.2.0) (2026-02-02)
+
+
+### Features
+
+* upgrade provider to AzureRM v4.0 ([82c6547](https://github.com/data-platform-hq/terraform-azurerm-workload-identity-federation/commit/82c654743030df16a389de2ef5ccb327c2005afb))
+
 # [1.1.0](https://github.com/data-platform-hq/terraform-azurerm-workload-identity-federation/compare/v1.0.1...v1.1.0) (2024-09-13)
 
 
